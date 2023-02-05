@@ -1,1 +1,33 @@
-res
+resources:
+- name: my-app-repo
+  type: git
+  source:
+    icon: github
+    uri: https://github.com/navin-kumar-srnk/reactapp.git
+    branch: master
+    username: naveen
+    password: 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
+
+
+jobs:
+- name: build
+  plan:
+  - get: my-app-repo
+    trigger: true
+  - task: build
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source:
+          repository: node
+          tag: 18
+      inputs: 
+        - name: my-app-repo 
+      run:
+        path: bash
+        args:
+        - -c
+        - |
+          ls
+       
