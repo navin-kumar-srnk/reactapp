@@ -1,3 +1,5 @@
+#!/bin/sh
 
 
-echo "script ran!!!!"
+
+echo "script runnig!!!!!!!!!!!!!!!"
