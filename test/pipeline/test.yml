@@ -25,9 +25,5 @@ jobs:
       inputs: 
         - name: my-app-repo 
       run:
-        path: bash
-        args:
-        - -c
-        - |
-          ls
+        path: my-app-repo/test/scripts/test.sh
        
