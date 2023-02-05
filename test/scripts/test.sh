@@ -9,6 +9,14 @@ cd my-app-repo/react-app
 
 npm install
 
+
+echo "done installing dependencies"
 # run npm build
 
+echo "start building react statistic files"
+
 npm run build
+
+echo "build done"
+
+ls
