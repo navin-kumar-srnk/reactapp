@@ -10,11 +10,11 @@ resources:
 
 
 jobs:
-- name: build
+- name: react-build
   plan:
   - get: my-app-repo
     trigger: true
-  - task: build
+  - task: npm-install-and-npm-build 
     config:
       platform: linux
       image_resource:
@@ -26,4 +26,6 @@ jobs:
         - name: my-app-repo 
       run:
         path: my-app-repo/test/scripts/test.sh
+
+
        

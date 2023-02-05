@@ -9,6 +9,6 @@ cd my-app-repo/react-app
 
 npm install
 
-display the contents
+# run npm build
 
-ls
+npm run build
