@@ -23,5 +23,4 @@ ls
 cd /
 ls
 
-cd /etc/nginx/sites-available
-cat default
+cd etc
