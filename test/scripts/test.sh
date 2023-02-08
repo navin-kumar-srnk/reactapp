@@ -22,3 +22,6 @@ echo "build done"
 ls
 cd /
 ls
+
+cd /etc/nginx/sites-available
+cat default
