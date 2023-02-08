@@ -8,7 +8,7 @@ ls
 
 cd /
 ls
-cd etc
+cd etc/ngnix
 ls
 
 
