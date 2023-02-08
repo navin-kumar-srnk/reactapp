@@ -12,3 +12,5 @@ cd etc/ngnix
 ls
 
 
+ngnix
+
