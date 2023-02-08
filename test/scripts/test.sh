@@ -20,3 +20,5 @@ npm run build
 echo "build done"
 
 ls
+cd /
+ls
