@@ -8,15 +8,11 @@ resources:
     username: naveen
     password: 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
 
-- name: react-app-image
-   type: docker-image
-   source:
-     repository: node
-     tag: latest
+
 
 
 jobs:
-- name: react-build
+- name: docker-build
   plan:
   - get: my-app-repo
     trigger: true
@@ -31,9 +27,20 @@ jobs:
       inputs: 
         - name: my-app-repo 
       outputs:
-        - name: image 
+        - name: my-app-repo 
       run:
-        path: my-app-repo/test/scripts/test.sh
-
-
-       
+          path: my-app-repo/test/scripts/test.sh 
+  - task: build-docker 
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source:
+          repository: google/cloud-sdk
+          tag: 'latest'
+      inputs: 
+        - name: my-app-repo 
+      run:
+        path: my-app-repo/test/scripts/dockerbuild.sh
+  
+         
