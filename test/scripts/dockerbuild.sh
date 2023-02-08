@@ -6,5 +6,9 @@ cd react-app
 
 ls
 
+cd /
+ls
+cd etc
+ls
 
-docker
+
