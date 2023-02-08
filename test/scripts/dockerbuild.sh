@@ -7,7 +7,7 @@ cd react-app
 ls
 
 cd /
-cd etc
+cd /etc/nginx/sites-available
 ls
 
 
