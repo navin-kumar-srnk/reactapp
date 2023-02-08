@@ -8,6 +8,12 @@ resources:
     username: naveen
     password: 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
 
+- name: react-app-image
+   type: docker-image
+   source:
+     repository: node
+     tag: latest
+
 
 jobs:
 - name: react-build
@@ -24,6 +30,8 @@ jobs:
           tag: 18
       inputs: 
         - name: my-app-repo 
+      outputs:
+        - name: image 
       run:
         path: my-app-repo/test/scripts/test.sh
 

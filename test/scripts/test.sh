@@ -20,9 +20,5 @@ npm run build
 echo "build done"
 
 ls
-cd /
-ls
 
-cd etc
-
-ls
+docker build -t react-app:latest .
