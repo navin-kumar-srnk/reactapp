@@ -7,7 +7,9 @@ cd react-app
 ls
 
 cd /
-cd /etc/nginx/sites-available
+cd /etc/nginx
 ls
+
+# move react build file into nginx directory
 
 
