@@ -24,3 +24,5 @@ cd /
 ls
 
 cd etc
+
+ls
