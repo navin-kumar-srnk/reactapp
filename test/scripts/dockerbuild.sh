@@ -7,6 +7,7 @@ cd react-app
 ls
 
 cd /
+cd etc
 ls
 
 
