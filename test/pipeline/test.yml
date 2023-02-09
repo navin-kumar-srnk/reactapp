@@ -41,7 +41,7 @@ jobs:
 
 - name: publish
   plan:
-  - get: build
+  - get: my-app-repo
     passed: [docker-build]
     trigger: true
   - task: test 
@@ -53,7 +53,7 @@ jobs:
           repository: node
           tag: 'latest'
       inputs: 
-        - name: build
+        - name: my-app-repo
       run:
           path: my-app-repo/test/scripts/dockerbuild.sh 
   
