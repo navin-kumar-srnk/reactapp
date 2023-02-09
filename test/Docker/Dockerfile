@@ -1,5 +1,10 @@
 FROM nginx:latest
 
+
+
+ADD my-app-repo /bin/my-app-repo
+
+
 WORKDIR /my-app-repo
 
 
