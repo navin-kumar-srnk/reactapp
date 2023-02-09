@@ -52,7 +52,7 @@ jobs:
 
 - name: build
   plan:
-  - get: image
+  - get: my-app-repo
   - put: built-image
     params:
-      build: image        
+      build: my-app-repo       
