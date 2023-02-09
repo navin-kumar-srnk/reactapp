@@ -1,5 +1,7 @@
 FROM nginx:latest
 
+WORKDIR /my-app-repo/react-app
+
 
 RUN ls -l
 
