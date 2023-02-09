@@ -21,8 +21,7 @@ echo "build done"
 
 cd ..
 cd ..
-ls
 
-mkdir build 
+cp -r . ../app-build
 
 
