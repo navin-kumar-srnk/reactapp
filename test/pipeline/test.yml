@@ -23,7 +23,7 @@ jobs:
       image_resource:
         type: docker-image
         source:
-          repository: docker
+          repository: alpine
           tag: 18
       inputs: 
         - name: my-app-repo 
