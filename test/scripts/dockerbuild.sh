@@ -5,7 +5,7 @@
 
 docker 
 # # build the Docker image
-# docker build -t reactapp-nginx my-app-repo/test/Docker/.
+docker build -t reactapp-nginx my-app-repo/test/Docker/.
 
 
 #   # push the Docker image
