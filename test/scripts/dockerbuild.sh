@@ -9,7 +9,7 @@ ls
 cd /
 cd /etc/nginx
 ls
-docker
+
 # move react build file into nginx directory
 
 
