@@ -2,7 +2,7 @@
 
 ls
 cd my-app-repo
-cd react-app
+cd react-app/build
 
 ls
 
