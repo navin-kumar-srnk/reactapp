@@ -8,6 +8,16 @@ resources:
     username: naveen
     password: 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
 
+- name: reactnginximage
+  type: docker-image
+  source:
+    email: naveenk9731@gmail.com
+    username: navin621
+    password: Navin@621
+    repository: navin@621/test
+
+
+
 jobs:
 - name: docker-build
   plan:
@@ -27,7 +37,7 @@ jobs:
         - name: my-app-repo 
       run:
           path: my-app-repo/test/scripts/dockerbuild.sh 
-  - task: build-docker 
+ 
     config:
       platform: linux
       image_resource:
@@ -40,4 +50,11 @@ jobs:
       run:
         path: my-app-repo/test/scripts/dockerbuild.sh
    
-
+- name: publish
+  public: true
+  serial: true
+  plan:
+  - get: my-app-repo
+  - put: reareactnginximagect
+    params:
+      build: my-app-repo/test/Docker/.
