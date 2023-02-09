@@ -16,5 +16,5 @@ ls
 
 # ls
 
-sudo docker images
+docker 
 
