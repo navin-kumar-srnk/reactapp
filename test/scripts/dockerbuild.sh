@@ -2,6 +2,7 @@
 
 
 
+ls
 
 docker -v
 
