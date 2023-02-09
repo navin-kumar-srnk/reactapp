@@ -34,7 +34,7 @@ jobs:
       inputs: 
         - name: my-app-repo 
       outputs:
-        - name: my-app-repo
+        - name: build
       puts: my-app-repo
       run:
           path: my-app-repo/test/scripts/test.sh 

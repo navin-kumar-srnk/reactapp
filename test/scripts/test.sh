@@ -24,7 +24,7 @@ cd ..
 
 mkdir build
 cp -r my-app-repo/react-app/build ./build
-
+cd build
 ls
 
 

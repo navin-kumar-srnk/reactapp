@@ -2,7 +2,7 @@ FROM nginx:latest
 
 
 
-ADD docker-build /bin/docker-build
+ADD build /bin/build
 
 
 WORKDIR /my-app-repo
