@@ -3,7 +3,7 @@
 
 
 
-dokcer 
+docker 
 # # build the Docker image
 # docker build -t reactapp-nginx my-app-repo/test/Docker/.
 
