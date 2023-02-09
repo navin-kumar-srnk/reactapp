@@ -5,6 +5,7 @@
 
 docker -v
 
+docker run docker -d
 docker images
 
 # # build the Docker image

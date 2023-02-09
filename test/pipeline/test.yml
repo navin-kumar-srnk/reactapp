@@ -8,10 +8,6 @@ resources:
     username: naveen
     password: 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
 
-
-
-
-
 jobs:
 - name: docker-build
   plan:
