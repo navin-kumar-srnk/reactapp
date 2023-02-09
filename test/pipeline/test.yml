@@ -8,10 +8,7 @@ resources:
     username: naveen
     password: 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
 
-- name: built-image
-  type: docker-image
-  source:
-    repository: navin621/test
+
 
 
 
@@ -50,16 +47,3 @@ jobs:
         path: my-app-repo/test/scripts/dockerbuild.sh
    
 
-- name: build
-  plan:
-  - get: my-app-repo
-  - put: built-image
-    params:
-      build: my-app-repo
-
-- name: push
-  plan:
-  - get: built-image
-  - put: built-image
-    params:
-      push: true
