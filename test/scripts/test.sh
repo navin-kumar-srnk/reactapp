@@ -19,5 +19,12 @@ npm run build
 
 echo "build done"
 
+cd ..
+cd ..
+
+mkdir build
+cp -r my-app-repo/react-app/build ./build
+
+ls
 
 

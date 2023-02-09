@@ -34,14 +34,15 @@ jobs:
       inputs: 
         - name: my-app-repo 
       outputs:
-        - name: my-app-repo 
-      puts: my-app-repo 
+        - name: my-app-repo
+      puts: my-app-repo
       run:
           path: my-app-repo/test/scripts/test.sh 
 
 - name: publish
   plan:
   - get: my-app-repo
+    trigger: true
   - put: reactnginximage
     params:
       build: my-app-repo/test/Docker/.
