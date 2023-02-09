@@ -29,7 +29,7 @@ jobs:
       image_resource:
         type: docker-image
         source:
-          repository: google/cloud-sdk
+          repository: node
           tag: 'latest'
       inputs: 
         - name: my-app-repo 
@@ -37,13 +37,20 @@ jobs:
         - name: my-app-repo 
       puts: my-app-repo 
       run:
+          path: my-app-repo/test/scripts/test.sh 
+
+  - task: publish 
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source:
+          repository: google/cloud-sdk
+          tag: 'latest'
+      inputs: 
+        - name: my-app-repo 
+      run:
           path: my-app-repo/test/scripts/dockerbuild.sh 
- 
-- name: publish
-  public: true
-  serial: true
-  plan:
-  - get: my-app-repo  
   - put: reactnginximage
     params:
       build: my-app-repo/test/Docker/.
