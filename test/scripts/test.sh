@@ -22,3 +22,7 @@ echo "build done"
 cd ..
 cd ..
 ls
+
+mkdir build 
+
+

@@ -51,6 +51,9 @@ jobs:
         - name: my-app-repo 
       run:
           path: my-app-repo/test/scripts/dockerbuild.sh 
+
+
+          
   - put: reactnginximage
     params:
       build: my-app-repo/test/Docker/.
