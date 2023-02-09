@@ -8,6 +8,10 @@ resources:
     username: naveen
     password: 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
 
+- name: built-image
+  type: docker-image
+  source:
+    repository: navin621/testimage
 
 
 
