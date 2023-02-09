@@ -10,10 +10,11 @@ ls
 
 # move react build file into nginx directory.....
 
-cp -R ./build /
+# cp -R ./build /
 
-cd /
+# cd /
 
-ls
+# ls
 
+docker images
 

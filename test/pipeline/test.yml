@@ -37,7 +37,7 @@ jobs:
       image_resource:
         type: docker-image
         source:
-          repository: nginx
+          repository: docker
           tag: 'latest'
       inputs: 
         - name: my-app-repo 
