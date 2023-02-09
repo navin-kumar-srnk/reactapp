@@ -16,5 +16,11 @@ ls
 
 # ls
 
-docker 
 
+
+# build the Docker image
+docker build -t my-docker-image .
+
+
+  # push the Docker image
+docker push my-docker-image         
