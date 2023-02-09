@@ -19,9 +19,5 @@ npm run build
 
 echo "build done"
 
-cd ..
-cd ..
-
-cp -r . ../app-build
 
 
