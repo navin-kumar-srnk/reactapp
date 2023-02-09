@@ -42,6 +42,7 @@ jobs:
 - name: publish
   plan:
   - get: my-app-repo
+  passed: docker-build
     trigger: true
   - put: reactnginximage
     params:
