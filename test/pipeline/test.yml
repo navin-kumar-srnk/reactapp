@@ -11,7 +11,7 @@ resources:
 - name: built-image
   type: docker-image
   source:
-    repository: navin621/testimage
+    repository: navin621/test
 
 
 
