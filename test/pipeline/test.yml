@@ -48,11 +48,4 @@ jobs:
         - name: image  
       run:
         path: my-app-repo/test/scripts/dockerbuild.sh
-  
-
-- name: build
-  plan:
-  - get: my-app-repo
-  - put: built-image
-    params:
-      build: my-app-repo       
+   
