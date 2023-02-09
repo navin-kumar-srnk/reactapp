@@ -41,8 +41,6 @@ jobs:
           tag: 'latest'
       inputs: 
         - name: my-app-repo 
-      outputs:
-        - name: image  
       run:
         path: my-app-repo/test/scripts/dockerbuild.sh
    
