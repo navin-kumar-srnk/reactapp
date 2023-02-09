@@ -14,7 +14,7 @@ resources:
     email: naveenk9731@gmail.com
     username: navin621
     password: Navin@621
-    repository: navin@621/test
+    repository: navin621/test
 
 
 
@@ -35,26 +35,15 @@ jobs:
         - name: my-app-repo 
       outputs:
         - name: my-app-repo 
+      puts: my-app-repo 
       run:
           path: my-app-repo/test/scripts/dockerbuild.sh 
  
-    config:
-      platform: linux
-      image_resource:
-        type: docker-image
-        source:
-          repository: google/cloud-sdk
-          tag: 'latest'
-      inputs: 
-        - name: my-app-repo 
-      run:
-        path: my-app-repo/test/scripts/dockerbuild.sh
-   
 - name: publish
   public: true
   serial: true
   plan:
-  - get: my-app-repo
-  - put: reareactnginximagect
+  - get: my-app-repo  
+  - put: reactnginximage
     params:
       build: my-app-repo/test/Docker/.
