@@ -11,7 +11,7 @@ ls
 # move react build file into nginx directory.....
 cd /
 
-cp -R /my-app-repo/react-app/build/. /usr/share/nginx/html
+cp -R /my-app-repo/react-app/build /
 
 cd /usr/share/nginx/html
 
