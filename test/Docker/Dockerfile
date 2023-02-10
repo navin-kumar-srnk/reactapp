@@ -7,6 +7,6 @@ WORKDIR /tmp/build/put
 RUN ls -l
 
 
-COPY my-app-repo/react-app/ /usr/share/nginx/html
+COPY /tmp/build/put/my-app-repo/react-app/ /usr/share/nginx/html
 
 
