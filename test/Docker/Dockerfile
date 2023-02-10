@@ -1,10 +1,5 @@
 FROM nginx:latest
 
-
-
-# ADD build /bin/build
-
-
 # WORKDIR /my-app-repo
 
 WORKDIR /tmp/build/put
