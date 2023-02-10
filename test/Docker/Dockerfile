@@ -2,7 +2,6 @@ FROM nginx:latest
 
 # WORKDIR /my-app-repo
 
-WORKDIR /tmp/build/put
 
 RUN ls -l
 
