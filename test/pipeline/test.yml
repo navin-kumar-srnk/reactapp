@@ -57,5 +57,6 @@ jobs:
   - put: reactnginximage
     params:
       code: build
+      CONTEXT: my-app-repo
       build: my-app-repo/test/Docker/. 
   
