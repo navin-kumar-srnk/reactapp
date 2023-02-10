@@ -4,7 +4,7 @@
 
 ls
 
-docker -v
+# docker -v
 
 
 # # build the Docker image
