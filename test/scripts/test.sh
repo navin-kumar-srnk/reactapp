@@ -22,9 +22,9 @@ echo "build done"
 cd ..
 cd ..
 
-mkdir build
+
 cp -r my-app-repo/react-app/build ./build/
-cd build
+cd build/build
 ls
 
 
