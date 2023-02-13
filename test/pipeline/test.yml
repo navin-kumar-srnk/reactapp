@@ -8,40 +8,20 @@ resources:
     username: naveen
     password: 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
 
-- name: reactnginximage
-  type: docker-image
-  source:
-    email: naveenk9731@gmail.com
-    username: navin621
-    password: Navin@621
-    repository: navin621/test
+# - name: reactnginximage
+#   type: docker-image
+#   source:
+#     email: naveenk9731@gmail.com
+#     username: navin621
+#     password: Navin@621
+#     repository: navin621/test
 
 
 
 jobs:
-- name: docker-build
-  plan:
-  - get: my-app-repo
-    trigger: true
-  - task: npm-install-and-npm-build 
-    config:
-      platform: linux
-      image_resource:
-        type: docker-image
-        source:
-          repository: node
-          tag: 'latest'
-      inputs: 
-        - name: my-app-repo 
-      outputs:
-        - name: build
-      puts: my-app-repo
-      run:
-          path: my-app-repo/test/scripts/test.sh 
-
 - name: publish
   plan:
-  - get: build
+  - get: my-app-repo
   - task: test 
     config:
       platform: linux
@@ -51,7 +31,7 @@ jobs:
           repository: docker
           tag: 'latest'
       inputs: 
-        - name: build
+        - name: my-app-repo
       run:
           path: my-app-repo/test/scripts/dockerbuild.sh     
   # - put: reactnginximage
