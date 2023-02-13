@@ -41,7 +41,7 @@ jobs:
 
 - name: publish
   plan:
-  - get: my-app-repo
+  - get: build
   - task: test 
     config:
       platform: linux
@@ -51,7 +51,7 @@ jobs:
           repository: docker
           tag: 'latest'
       inputs: 
-        - name: my-app-repo
+        - name: build
       run:
           path: my-app-repo/test/scripts/dockerbuild.sh     
   # - put: reactnginximage
